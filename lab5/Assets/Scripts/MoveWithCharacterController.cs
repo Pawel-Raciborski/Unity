@@ -54,4 +54,9 @@ public class MoveWithCharacterController : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
+
+    public void JumpWithForce(float force)
+    {
+        playerVelocity.y = Mathf.Sqrt(jumpHeight * force * -3.0f * gravityValue);
+    }
 }
